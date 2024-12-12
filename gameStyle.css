@@ -1,0 +1,25 @@
+#tic-tac-toe {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    justify-content: center;
+    
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #f0f0f0;
+    border: 6px solid #252424;
+}
+
+.cell:hover {
+    background-color: #e0e0e0;
+}
+
+#button{
+    
+     color: rgb(176, 161, 161);
+
+}
