@@ -64,3 +64,21 @@ button {
 button:hover {
     background-color: #6a00cc; 
 }
+
+.score{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: #8800FF;
+    font-size: x-large;
+    margin-bottom: 20px;
+}
+
+#scoreTable {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: #8800FF;
+    font-size: x-large;
+    margin-bottom: 20px;
+}

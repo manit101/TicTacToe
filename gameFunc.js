@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const cells = document.querySelectorAll(".cell");
     const statusText = document.getElementById("status");
     const resetButton = document.getElementById("reset");
+    const scoreX = document.getElementById("scoreX");
+    const scoreO = document.getElementById("scoreO");
   
     let currentPlayer = "X";
     let gameBoard = ["", "", "", "", "", "", "", "", ""];
@@ -41,6 +43,11 @@ document.addEventListener("DOMContentLoaded", () => {
           gameBoard[a] === gameBoard[c]
         ) {
           statusText.textContent = `Player ${gameBoard[a]} wins!`;
+          if (gameBoard[a] === "X") {
+            scoreX.textContent = parseInt(scoreX.textContent) + 1;
+          } else {
+            scoreO.textContent = parseInt(scoreO.textContent) + 1;
+          }
           gameOver = true;
           return;
         }
