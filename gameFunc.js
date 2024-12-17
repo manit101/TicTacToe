@@ -4,10 +4,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const resetButton = document.getElementById("reset");
   const scoreX = document.getElementById("scoreX");
   const scoreO = document.getElementById("scoreO");
+  const firstPlayerSelect = document.getElementById("firstPlayer");  
 
-  let currentPlayer = "X";
+  let currentPlayer = "X";  
   let gameBoard = ["", "", "", "", "", "", "", "", ""];
   let gameOver = false;
+
+  const handleFirstPlayerChange = () => {
+    currentPlayer = firstPlayerSelect.value; 
+    statusText.textContent = `Player ${currentPlayer}'s turn`;  
+    resetGame();  
+  };
+
+  firstPlayerSelect.addEventListener("change", handleFirstPlayerChange);
 
   const handleCellClick = (event) => {
     const cell = event.target;
@@ -69,10 +78,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const resetGame = () => {
     gameBoard = ["", "", "", "", "", "", "", "", ""];
-    currentPlayer = "X";
-    gameOver = false;
-    statusText.textContent = "Player X's turn";
     cells.forEach((cell) => (cell.textContent = ""));
+    gameOver = false;
+    statusText.textContent = `Player ${currentPlayer}'s turn`;  
   };
 
   cells.forEach((cell) => {
