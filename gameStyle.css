@@ -19,6 +19,18 @@ body {
     display: flex; 
 }
 
+.first-player{
+    display: flex;
+    color: #8800FF;
+    margin-bottom: 20px;
+    font-size: larger;
+}
+
+#firstPlayer{
+    display: flex;
+    color: #8800FF;
+}
+
 .tic-tac-toe {
     display: grid;
     grid-template-columns: repeat(3, 100px);
@@ -90,5 +102,5 @@ button:hover {
 
 #scoreTable th, #scoreTable td {
     padding: 10px;
-    border: 2px solid #8800FF;
+    border: 2px solid #8800FF;
 }
