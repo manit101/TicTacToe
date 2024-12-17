@@ -8,18 +8,25 @@ body {
     align-items: center; 
 }
 
+#heading {
+    justify-content: center;
+    display: flex;
+    color: #8800FF;
+    margin-bottom: 20px;
+}
+
+.game-container {
+    display: flex; 
+}
+
 .tic-tac-toe {
     display: grid;
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(3, 100px);
     gap: 10px;
+    align-self: center;
     justify-content: center;
-}
-
-#heading {
-    justify-content: center;
-    display: flex;
-    color: #8800FF;
+    margin-right: 40px; 
 }
 
 .cell {
@@ -46,7 +53,8 @@ body {
     display: flex;
     color: #8800FF;
     font-size: x-large;
-    margin-bottom: 20px; 
+    margin-top: 30px;
+    margin-bottom: 10px; 
 }
 
 button {
@@ -58,27 +66,29 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 20px;  
+    margin-top: 10px;
 }
 
 button:hover {
     background-color: #6a00cc; 
 }
 
-.score{
+.score {
+    display: flex;
     justify-content: center;
     align-items: center;
-    display: flex;
     color: #8800FF;
     font-size: x-large;
-    margin-bottom: 20px;
 }
 
 #scoreTable {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    color: #8800FF;
-    font-size: x-large;
-    margin-bottom: 20px;
+    margin: 0;
+    font-size: 24px;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+#scoreTable th, #scoreTable td {
+    padding: 10px;
+    border: 2px solid #8800FF;
 }
