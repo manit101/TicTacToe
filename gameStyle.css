@@ -1,11 +1,35 @@
 body {
-    background-color: #c4b5aa;  
+    background-color: #5defab;  
     margin: 0; 
     padding: 0; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; 
+    background-image: url("https://wallpapercave.com/wp/wp8984722.jpg");
+}
+
+#heading {
+    justify-content: center;
+    display: flex;
+    color: #5e4d6d;
+    margin-bottom: 20px;
+}
+
+.game-container {
+    display: flex; 
+}
+
+.first-player{
+    display: flex;
+    color: #0e0c10;
+    margin-bottom: 20px;
+    font-size: larger;
+}
+
+#firstPlayer{
+    display: flex;
+    color: #3a3144;
 }
 
 .tic-tac-toe {
@@ -13,20 +37,16 @@ body {
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(3, 100px);
     gap: 10px;
+    align-self: center;
     justify-content: center;
-}
-
-#heading {
-    justify-content: center;
-    display: flex;
-    color: #483955;
+    margin-right: 40px; 
 }
 
 .cell {
     width: 100px;
     height: 100px;
-    background-color: #dfb9c3;
-    border: 6px solid #474a45;
+    background-color: #cee8b2;
+    border: 6px solid #807e81;
     display: flex;           
     align-items: center;     
     justify-content: center; 
@@ -37,48 +57,52 @@ body {
 }
 
 .cell:hover {
-    background-color: #d7bfbf;
+    background-color: #e0e0e0;
 }
 
 #status {
     justify-content: center;
     align-items: center;
     display: flex;
-    color: #453951;
+    color: #473e4f;
     font-size: x-large;
-    margin-bottom: 20px; 
+    margin-top: 30px;
+    margin-bottom: 10px; 
+    
 }
 
 button {
-    color: rgb(140, 47, 47);
+    color: rgb(176, 161, 161);
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #655e6b;
+    background-color: #47424a;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 20px;  
+    margin-top: 10px;
 }
 
 button:hover {
-    background-color: #776786; 
+    background-color: #bfb9c5; 
 }
 
-.score{
+.score {
+    display: flex;
     justify-content: center;
     align-items: center;
-    display: flex;
-    color: #2b695e;
+    color: #4a3f54;
     font-size: x-large;
-    margin-bottom: 20px;
 }
 
 #scoreTable {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    color: #303131;
-    font-size: x-large;
-    margin-bottom: 40px;
+    margin: 0;
+    font-size: 24px;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+#scoreTable th, #scoreTable td {
+    padding: 10px;
+    border: 2px solid #8e8993;
 }
