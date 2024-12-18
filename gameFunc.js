@@ -4,16 +4,34 @@ document.addEventListener("DOMContentLoaded", () => {
   const resetButton = document.getElementById("reset");
   const scoreX = document.getElementById("scoreX");
   const scoreO = document.getElementById("scoreO");
-  const firstPlayerSelect = document.getElementById("firstPlayer");  
+  const firstPlayerSelect = document.getElementById("firstPlayer");
 
-  let currentPlayer = "X";  
+  let currentPlayer = "X";
   let gameBoard = ["", "", "", "", "", "", "", "", ""];
   let gameOver = false;
 
+  const loadScores = () => {
+    const storedScores = JSON.parse(localStorage.getItem('scores')); 
+    if (storedScores) {
+      scoreX.textContent = storedScores.X;  
+      scoreO.textContent = storedScores.O;  
+    }
+  };
+
+  loadScores();  
+
+  const updateScoresInLocalStorage = () => {
+    const scores = {
+      X: parseInt(scoreX.textContent),
+      O: parseInt(scoreO.textContent),
+    };
+    localStorage.setItem('scores', JSON.stringify(scores)); 
+  };
+
   const handleFirstPlayerChange = () => {
-    currentPlayer = firstPlayerSelect.value; 
-    statusText.textContent = `Player ${currentPlayer}'s turn`;  
-    resetGame();  
+    currentPlayer = firstPlayerSelect.value;
+    statusText.textContent = `Player ${currentPlayer}'s turn`;
+    resetGame();
   };
 
   firstPlayerSelect.addEventListener("change", handleFirstPlayerChange);
@@ -53,15 +71,19 @@ document.addEventListener("DOMContentLoaded", () => {
         gameBoard[a] === gameBoard[c]
       ) {
         statusText.textContent = `Player ${gameBoard[a]} wins!`;
-        
+
         if (gameBoard[a] === "X") {
           scoreX.textContent = parseInt(scoreX.textContent) + 1;
         } else {
           scoreO.textContent = parseInt(scoreO.textContent) + 1;
         }
+
+        updateScoresInLocalStorage(); 
+        
         gameOver = true;
         setTimeout(() => {
           alert(`Player ${currentPlayer} wins!`);
+          resetBoard(); 
         }, 100);
         return;
       }
@@ -72,6 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
       gameOver = true;
       setTimeout(() => {
         alert("It's a draw!");
+        resetBoard(); 
       }, 100);
     }
   };
@@ -80,12 +103,27 @@ document.addEventListener("DOMContentLoaded", () => {
     gameBoard = ["", "", "", "", "", "", "", "", ""];
     cells.forEach((cell) => (cell.textContent = ""));
     gameOver = false;
-    statusText.textContent = `Player ${currentPlayer}'s turn`;  
+    statusText.textContent = `Player ${currentPlayer}'s turn`;
   };
+
+  const resetBoard = () => {
+    setTimeout(() => {
+      gameBoard = ["", "", "", "", "", "", "", "", ""];
+      cells.forEach((cell) => (cell.textContent = ""));
+      currentPlayer = firstPlayerSelect.value; 
+      statusText.textContent = `Player ${currentPlayer}'s turn`;
+      gameOver = false; 
+    }, 1000);
+  };
+
+  resetButton.addEventListener("click", () => {
+    resetGame();
+    localStorage.removeItem('scores');
+    scoreX.textContent = "0";
+    scoreO.textContent = "0";
+  });
 
   cells.forEach((cell) => {
     cell.addEventListener("click", handleCellClick);
   });
-
-  resetButton.addEventListener("click", resetGame);
 });
