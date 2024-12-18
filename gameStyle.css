@@ -12,23 +12,28 @@ body {
 #heading {
     justify-content: center;
     display: flex;
-    color: #13131251;
+    color: #f6d1f6; 
     margin-bottom: 20px;
+    font-size: 3em; 
+    text-shadow: 0 0 10px #b8b0ef, 0 0 20px #c963c9, 0 0 30px #ff00ff; 
 }
-
 .game-container {
     display: flex; 
 }
 
 .first-player{
     display: flex;
-    color: #6d0e50;
+    color: #ad8225;
+    text-shadow: #42560f;
+    box-shadow: #b5ee24;
     margin-bottom: 20px;
     font-size: larger;
 }
 
-
-
+#firstPlayer{
+    display: flex;
+    color: #3a3144;
+}
 
 .tic-tac-toe {
     display: grid;
@@ -51,7 +56,7 @@ body {
     font-size: 36px;         
     font-weight: bold;       
     color: #252424; 
-    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px rgb(196, 61, 184); background-color 6.1s, box-shadow 6.50s;        
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff; background-color 0.1s, box-shadow .50s;        
     cursor: pointer;        
 }
 
@@ -101,3 +106,7 @@ button:hover {
     border-collapse: collapse;
 }
 
+#scoreTable th, #scoreTable td {
+    padding: 10px;
+    border: 2px solid #c79cf1;
+}
