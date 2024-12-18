@@ -1,18 +1,18 @@
 body {
-    background-color: #5defab;  
+    background-color: #0c0c0c;  
     margin: 0; 
     padding: 0; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; 
-    background-image: url("https://wallpapercave.com/wp/wp8984722.jpg");
+    background-image: url("");
 }
 
 #heading {
     justify-content: center;
     display: flex;
-    color: #5e4d6d;
+    color: #13131251;
     margin-bottom: 20px;
 }
 
@@ -22,15 +22,13 @@ body {
 
 .first-player{
     display: flex;
-    color: #0e0c10;
+    color: #6d0e50;
     margin-bottom: 20px;
     font-size: larger;
 }
 
-#firstPlayer{
-    display: flex;
-    color: #3a3144;
-}
+
+
 
 .tic-tac-toe {
     display: grid;
@@ -45,26 +43,27 @@ body {
 .cell {
     width: 100px;
     height: 100px;
-    background-color: #cee8b2;
+    background-color: rgba(162, 35, 137, 0.1);
     border: 6px solid #807e81;
     display: flex;           
     align-items: center;     
     justify-content: center; 
     font-size: 36px;         
     font-weight: bold;       
-    color: #252424;         
+    color: #252424; 
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px rgb(196, 61, 184); background-color 6.1s, box-shadow 6.50s;        
     cursor: pointer;        
 }
 
 .cell:hover {
-    background-color: #e0e0e0;
+    background-color: rgba(0, 255, 255, 0.3); box-shadow: 0 0 15px #0ff, 0 0 30px #0ff, 0 0 45px #0ff;
 }
 
 #status {
     justify-content: center;
     align-items: center;
     display: flex;
-    color: #473e4f;
+    color: #6b2667;
     font-size: x-large;
     margin-top: 30px;
     margin-bottom: 10px; 
@@ -75,7 +74,7 @@ button {
     color: rgb(176, 161, 161);
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #47424a;
+    background-color: #594b62;
     color: white;
     border: none;
     border-radius: 5px;
@@ -84,14 +83,14 @@ button {
 }
 
 button:hover {
-    background-color: #bfb9c5; 
+    background-color: #42560f; 
 }
 
 .score {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #4a3f54;
+    color: #8f3670;
     font-size: x-large;
 }
 
@@ -102,7 +101,3 @@ button:hover {
     border-collapse: collapse;
 }
 
-#scoreTable th, #scoreTable td {
-    padding: 10px;
-    border: 2px solid #8e8993;
-}
