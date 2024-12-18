@@ -1,12 +1,11 @@
 body {
     background-color: #0c0c0c;  
-    margin: 0; 
-    padding: 0; 
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; 
-    background-image: url("");
+    
 }
 
 #heading {
@@ -56,7 +55,7 @@ body {
     font-size: 36px;         
     font-weight: bold;       
     color: #252424; 
-    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff; background-color 0.1s, box-shadow .50s;        
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;  
     cursor: pointer;        
 }
 
