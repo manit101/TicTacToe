@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   loadScores();  
 
-  const updateScoresInLocalStorage = () => {
+  const updateScores = () => {
     const scores = {
       X: parseInt(scoreX.textContent),
       O: parseInt(scoreO.textContent),
@@ -28,15 +28,15 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem('scores', JSON.stringify(scores)); 
   };
 
-  const handleFirstPlayerChange = () => {
+  const firstPlayerChange = () => {
     currentPlayer = firstPlayerSelect.value;
     statusText.textContent = `Player ${currentPlayer}'s turn`;
     resetGame();
   };
 
-  firstPlayerSelect.addEventListener("change", handleFirstPlayerChange);
+  firstPlayerSelect.addEventListener("change", firstPlayerChange);
 
-  const handleCellClick = (event) => {
+  const cellClick = (event) => {
     const cell = event.target;
     const index = Array.from(cells).indexOf(cell);
 
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
           scoreO.textContent = parseInt(scoreO.textContent) + 1;
         }
 
-        updateScoresInLocalStorage(); 
+        updateScores(); 
         
         gameOver = true;
         setTimeout(() => {
@@ -124,6 +124,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   cells.forEach((cell) => {
-    cell.addEventListener("click", handleCellClick);
+    cell.addEventListener("click", cellClick);
   });
 });
