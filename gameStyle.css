@@ -1,34 +1,37 @@
 body {
-    background-color: #5defab;  
-    margin: 0; 
-    padding: 0; 
+    background-color: #0a0808;  
+   
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; 
+  
 }
 
 #heading {
     justify-content: center;
     display: flex;
-    color: #8800FF;
+    color: #f6d1f6; 
     margin-bottom: 20px;
+    font-size: 3em; 
+    text-shadow: 0 0 10px #b8b0ef, 0 0 20px #c963c9, 0 0 30px #ff00ff; 
 }
-
 .game-container {
     display: flex; 
 }
 
 .first-player{
     display: flex;
-    color: #8800FF;
+    color: #ad8225;
+    text-shadow: #42560f;
+    box-shadow: #b5ee24;
     margin-bottom: 20px;
     font-size: larger;
 }
 
 #firstPlayer{
     display: flex;
-    color: #8800FF;
+    color: #3a3144;
 }
 
 .tic-tac-toe {
@@ -36,61 +39,60 @@ body {
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(3, 100px);
     gap: 10px;
-    align-self: center;
-    justify-content: center;
-    margin-right: 40px; 
+   margin-right: 40px; 
 }
 
 .cell {
     width: 100px;
     height: 100px;
-    background-color: #d7ef03;
-    border: 6px solid #8800FF;
+    background-color: rgba(162, 35, 137, 0.1);
+    border: 6px solid #807e81;
     display: flex;           
     align-items: center;     
     justify-content: center; 
     font-size: 36px;         
     font-weight: bold;       
-    color: #252424;         
+    color: #252424; 
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff; background-color 0.1s, box-shadow .50s;        
     cursor: pointer;        
 }
 
 .cell:hover {
-    background-color: #e0e0e0;
+    background-color: rgba(0, 255, 255, 0.3); box-shadow: 0 0 15px #0ff, 0 0 30px #0ff, 0 0 45px #0ff;
 }
 
 #status {
     justify-content: center;
     align-items: center;
     display: flex;
-    color: #8800FF;
+    color: #6b2667;
     font-size: x-large;
     margin-top: 30px;
     margin-bottom: 10px; 
+    
 }
 
 button {
     color: rgb(176, 161, 161);
     padding: 10px 20px;
-    font-size: 16px;
-    background-color: #8800FF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
+    font-size: 20px;
+    background: #27312b;
+   
+     margin-top: 10px;
+    
 }
 
 button:hover {
-    background-color: #6a00cc; 
+    background-color: #b8c39b; 
+    
 }
 
 .score {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #8800FF;
-    font-size: x-large;
+    color: #8f3670;
+  
 }
 
 #scoreTable {
@@ -102,5 +104,5 @@ button:hover {
 
 #scoreTable th, #scoreTable td {
     padding: 10px;
-    border: 2px solid #8800FF;
+    border: 2px solid #c79cf1;
 }
