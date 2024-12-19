@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const firstPlayerChange = () => {
     currentPlayer = firstPlayerSelect.value;
     statusText.textContent = `Player ${currentPlayer}'s turn`;
-    resetGame();
+    resetBoard();
   };
 
   firstPlayerSelect.addEventListener("change", firstPlayerChange);
@@ -99,13 +99,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  const resetGame = () => {
-    gameBoard = ["", "", "", "", "", "", "", "", ""];
-    cells.forEach((cell) => (cell.textContent = ""));
-    gameOver = false;
-    statusText.textContent = `Player ${currentPlayer}'s turn`;
-  };
-
   const resetBoard = () => {
     setTimeout(() => {
       gameBoard = ["", "", "", "", "", "", "", "", ""];
@@ -113,11 +106,11 @@ document.addEventListener("DOMContentLoaded", () => {
       currentPlayer = firstPlayerSelect.value; 
       statusText.textContent = `Player ${currentPlayer}'s turn`;
       gameOver = false; 
-    }, 1000);
+    }, 100);
   };
 
   resetButton.addEventListener("click", () => {
-    resetGame();
+    resetBoard();
     localStorage.removeItem('scores');
     scoreX.textContent = "0";
     scoreO.textContent = "0";
