@@ -53,7 +53,7 @@ body {
     font-size: 36px;         
     font-weight: bold;       
     color: #252424; 
-    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff; background-color 0.1s, box-shadow .50s;        
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff; background-color: 0.1s, box-shadow .50s;        
     cursor: pointer;        
 }
 
@@ -73,13 +73,11 @@ body {
 }
 
 button {
-    color: rgb(176, 161, 161);
+    color: #8f3670;
     padding: 10px 20px;
     font-size: 20px;
     background: #27312b;
-   
-     margin-top: 10px;
-    
+    margin-top: 10px;
 }
 
 button:hover {
