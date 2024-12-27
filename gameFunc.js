@@ -72,6 +72,10 @@ document.addEventListener("DOMContentLoaded", () => {
       ) {
         statusText.textContent = `Player ${gameBoard[a]} wins!`;
 
+        combination.forEach(index => {
+          cells[index].style.backgroundColor = "#502b43"; 
+        });
+
         if (gameBoard[a] === "X") {
           scoreX.textContent = parseInt(scoreX.textContent) + 1;
         } else {
@@ -102,7 +106,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const resetBoard = () => {
     setTimeout(() => {
       gameBoard = ["", "", "", "", "", "", "", "", ""];
-      cells.forEach((cell) => (cell.textContent = ""));
+      cells.forEach((cell) => {
+        cell.textContent = "";
+        cell.style.backgroundColor = "";
+      });
       currentPlayer = firstPlayerSelect.value; 
       statusText.textContent = `Player ${currentPlayer}'s turn`;
       gameOver = false; 
