@@ -24,19 +24,24 @@ This project was developed by:
 - [Krishna21435](https://github.com/Krishna21435)
 - [ShridharAggrwal](https://github.com/ShridharAggrwal)
 - [Narendrapatel00](https://github.com/narendrapatel00)
+- [Manit101](https://github.com/manit101)
+
 
 ## 🛠️ Running Locally
 Follow these steps to run the project on your device:
 
-1. **Clone the repository**  
+1. **Fork the repository**  
+   Click the **Fork** button at the top-right corner of the GitHub repository page to create your own copy.
+
+2. **Clone the forked repository**  
    ```sh
-   git clone <repository-url>
+   git clone https://github.com/your-username/TicTacToe.git
    ```
-2. **Navigate to the project directory**  
+3. **Navigate to the project directory**  
    ```sh
-   cd tic-tac-toe
+   cd TicTacToe
    ```
-3. **Open the project in a browser**  
+4. **Open the project in a browser**  
    Open the `index.html` file in any modern web browser.
 
 🎉 Have fun playing and competing for the highest score!
