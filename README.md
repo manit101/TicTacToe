@@ -1,10 +1,16 @@
 # Classic Tic Tac Toe 🎲✨
 
-Enjoy the timeless **Tic Tac Toe** game with a modern cyberpunk UI! Includes a scoreboard using local storage, allowing players to track scores across sessions. Players can also choose who plays first: **Player X** or **Player O**.
+Enjoy the timeless **Tic Tac Toe** game with a modern cyberpunk UI!  
+Features include:
+- A scoreboard using local storage to keep track of scores.
+- **Reset Score Button** to clear stored scores and start fresh.
+- **Win & Tie Alerts** that notify players when someone wins or the match ends in a tie.
+- Players can also choose who plays first: **Player X** or **Player O**.
 
 ## 🎮 Live Demo
 Check out the live version hosted on **Netlify**:  
 🔗 [Play Classic Tic Tac Toe](https://playtictactoefun.netlify.app/)
+![image](https://github.com/user-attachments/assets/12437c12-83d4-4d27-ac08-bc58708a5d85)
 
 ## 📁 Project Structure
 The project consists of the following files:
