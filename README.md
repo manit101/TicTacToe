@@ -6,6 +6,7 @@ Features include:
 - **Reset Score Button** to clear stored scores and start fresh.
 - **Win & Tie Alerts** that notify players when someone wins or the match ends in a tie.
 - Players can also choose who plays first: **Player X** or **Player O**.
+- Game is responsive for all kinds devices and screen sizes.
 
 ## 🎮 Live Demo
 Check out the live version hosted on **Netlify**:  
