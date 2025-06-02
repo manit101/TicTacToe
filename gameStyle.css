@@ -9,6 +9,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center; 
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 #heading {
@@ -16,13 +19,21 @@ body {
     display: flex;
     color: #f6d1f6; 
     margin-bottom: 20px;
-    font-size: 3em; 
+    font-size: clamp(2em, 8vw, 3em); 
     font-family: 'Tourney';
     text-shadow: 0 0 10px #b8b0ef, 0 0 20px #c963c9, 0 0 30px #ff00ff; 
+    text-align: center;
+    width: 100%;
 }
 
 .game-container {
     display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px;
 }
 
 .first-player{
@@ -33,6 +44,10 @@ body {
     margin-bottom: 20px;
     font-size: larger;
     font-family: 'Pixelify Sans';
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
 }
 
 #firstPlayer{
@@ -47,15 +62,15 @@ body {
 
 .tic-tac-toe {
     display: grid;
-    grid-template-columns: repeat(3, 100px);
-    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(3, minmax(60px, 100px));
+    grid-template-rows: repeat(3, minmax(60px, 100px));
     gap: 10px;
-    margin-right: 40px; 
+    margin-right: 0; 
 }
 
 .cell {
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: 100%;
     background-color: rgba(162, 35, 137, 0.1);
     border: 6px solid #807e81;
     display: flex;           
@@ -107,7 +122,8 @@ button:hover {
     align-items: center;
     color: #8f3670;
     font-family: 'Pixelify Sans';
-
+    width: 100%;
+    max-width: 300px;
 }
 
 #scoreTable {
@@ -115,9 +131,47 @@ button:hover {
     font-size: 24px;
     text-align: center;
     border-collapse: collapse;
+    width: 100%;
 }
 
 #scoreTable th, #scoreTable td {
     padding: 10px;
     border: 2px solid #c79cf1;
+}
+
+/* Add these new media queries */
+@media screen and (max-width: 480px) {
+    .tic-tac-toe {
+        grid-template-columns: repeat(3, minmax(60px, 80px));
+        grid-template-rows: repeat(3, minmax(60px, 80px));
+        gap: 5px;
+    }
+
+    .cell {
+        font-size: 24px;
+    }
+
+    #status {
+        font-size: 1.2em;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .tic-tac-toe {
+        grid-template-columns: repeat(3, minmax(50px, 70px));
+        grid-template-rows: repeat(3, minmax(50px, 70px));
+    }
+
+    .cell {
+        border-width: 3px;
+    }
+
+    #scoreTable {
+        font-size: 18px;
+    }
 }
