@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const scoreX = document.getElementById("scoreX");
   const scoreO = document.getElementById("scoreO");
   const firstPlayerSelect = document.getElementById("firstPlayer");
+  const themeToggle = document.getElementById("themeToggle");
 
   let currentPlayer = "X";
   let gameBoard = ["", "", "", "", "", "", "", "", ""];
@@ -126,4 +127,20 @@ document.addEventListener("DOMContentLoaded", () => {
   cells.forEach((cell) => {
     cell.addEventListener("click", cellClick);
   });
+
+  // Add theme toggle functionality
+  const toggleTheme = () => {
+    document.body.classList.toggle('light-mode');
+    const isLightMode = document.body.classList.contains('light-mode');
+    themeToggle.textContent = isLightMode ? '🌙' : '☀️';
+    localStorage.setItem('theme', isLightMode ? 'light' : 'dark');
+  };
+
+  // Load saved theme preference
+  if (localStorage.getItem('theme') === 'light') {
+    document.body.classList.add('light-mode');
+    themeToggle.textContent = '🌙';
+  }
+
+  themeToggle.addEventListener('click', toggleTheme);
 });
