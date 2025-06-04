@@ -47,6 +47,7 @@ body {
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
+    align-items: center;
     width: 100%;
 }
 
@@ -137,6 +138,75 @@ button:hover {
 #scoreTable th, #scoreTable td {
     padding: 10px;
     border: 2px solid #c79cf1;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.theme-btn {
+    padding: 5px 8px;
+    font-size: 16px;
+    margin-top: 0;
+    margin-right: 10px;
+    height: fit-content;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 35px;
+}
+
+/* Light Mode Styles */
+body.light-mode {
+    background-color: #f0f0f0;
+}
+
+.light-mode #heading {
+    color: #8b1a8b;
+    text-shadow: 0 0 10px #d4d0f5, 0 0 20px #a341a3, 0 0 30px #ff69ff;
+}
+
+.light-mode .first-player {
+    color: #6b511c;
+}
+
+.light-mode .cell {
+    background-color: rgba(162, 35, 137, 0.05);
+    border-color: #4a484a;
+    color: #6b1f63;
+    text-shadow: 0 0 10px #ff69ff, 0 0 20px #ff69ff;
+}
+
+.light-mode .cell:hover {
+    background-color: rgba(255, 105, 255, 0.2);
+    box-shadow: 0 0 15px #ff69ff, 0 0 30px #ff69ff;
+}
+
+.light-mode #status {
+    color: #8b1a8b;
+    text-shadow: 0 0 10px #a341a3;
+}
+
+.light-mode button {
+    color: #6b1f63;
+    background: #f0f0f0;
+    border: 2px solid #8b1a8b;
+}
+
+.light-mode button:hover {
+    background-color: #ffd4ff;
+}
+
+.light-mode .score {
+    color: #6b1f63;
+}
+
+.light-mode #scoreTable th, 
+light-mode #scoreTable td {
+    border-color: #8b1a8b;
 }
 
 /* Add these new media queries */
